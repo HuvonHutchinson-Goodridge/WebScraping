@@ -1,0 +1,78 @@
+BettingSite, Sport, Date, Player, Score, Type
+PrizePicks, MMA, Sat, Jul 15 6:10 PM, Ailín Pérez, 45.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 6:40 PM, Alexander Munoz, 56.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 7:10 PM, Azat Maksum, 43.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 7:40 PM, Evan Elder, 40.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 8:10 PM, Melquizael Costa, 54.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 8:40 PM, Viktoriia Dudakova, 38.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 9:10 PM, Melsik Baghdasaryan, 53.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 9:40 PM, Nazim Sadykhov	, 27.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 10:10 PM, Francisco Prado, 28.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 10:40 PM, Norma Dumont , 47.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 11:10 PM, Walt Harris, 27.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 11:40 PM, Junyong Park, 44.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 11:40 PM, Holly Holm, 90.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 7:10 PM, Azat Maksum, 12.5, Fight Time (Mins)
+PrizePicks, MMA, Sat, Jul 15 7:40 PM, Evan Elder, 10.0, Fight Time (Mins)
+PrizePicks, MMA, Sat, Jul 15 8:10 PM, Melquizael Costa, 12.5, Fight Time (Mins)
+PrizePicks, MMA, Sat, Jul 15 9:10 PM, Melsik Baghdasaryan, 12.5, Fight Time (Mins)
+PrizePicks, MMA, Sat, Jul 15 9:40 PM, Nazim Sadykhov	, 5.0, Fight Time (Mins)
+PrizePicks, MMA, Sat, Jul 15 10:10 PM, Francisco Prado, 6.5, Fight Time (Mins)
+PrizePicks, MMA, Sat, Jul 15 11:10 PM, Walt Harris, 8.5, Fight Time (Mins)
+PrizePicks, MMA, Sat, Jul 15 6:10 PM, Ailín Pérez, 1.5, Takedowns
+PrizePicks, MMA, Sat, Jul 15 6:40 PM, Alexander Munoz, 2.5, Takedowns
+PrizePicks, MMA, Sat, Jul 15 7:40 PM, Evan Elder, 2.0, Takedowns
+PrizePicks, MMA, Sat, Jul 15 8:10 PM, Melquizael Costa, 1.5, Takedowns
+PrizePicks, MMA, Sat, Jul 15 8:40 PM, Viktoriia Dudakova, 2.5, Takedowns
+PrizePicks, MMA, Sat, Jul 15 11:40 PM, Holly Holm, 1.5, Takedowns
+PrizePicks, MMA, Sat, Jul 15 6:10 PM, Ailín Pérez, 71.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 6:40 PM, Alexander Munoz, 80.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 7:10 PM, Azat Maksum, 110.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 7:40 PM, Evan Elder, 102.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 8:10 PM, Melquizael Costa, 92.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 8:40 PM, Viktoriia Dudakova, 87.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 9:10 PM, Melsik Baghdasaryan, 96.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 9:40 PM, Nazim Sadykhov	, 81.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 10:10 PM, Francisco Prado, 76.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 10:40 PM, Norma Dumont , 69.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 11:10 PM, Walt Harris, 94.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 11:40 PM, Junyong Park, 80.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 11:40 PM, Holly Holm, 100.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 6:10 PM, Ailín Pérez, 45.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 6:40 PM, Alexander Munoz, 56.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 7:10 PM, Azat Maksum, 43.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 7:40 PM, Evan Elder, 40.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 8:10 PM, Melquizael Costa, 54.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 9:10 PM, Melsik Baghdasaryan, 53.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 9:40 PM, Nazim Sadykhov	, 27.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 10:10 PM, Francisco Prado, 28.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 10:40 PM, Norma Dumont , 47.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 11:10 PM, Walt Harris, 27.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 11:40 PM, Junyong Park, 44.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 11:40 PM, Holly Holm, 90.5, Significant Strikes
+PrizePicks, MMA, Sat, Jul 15 7:10 PM, Azat Maksum, 11.0, Fight Time (Mins)
+PrizePicks, MMA, Sat, Jul 15 7:40 PM, Evan Elder, 10.0, Fight Time (Mins)
+PrizePicks, MMA, Sat, Jul 15 8:10 PM, Melquizael Costa, 12.5, Fight Time (Mins)
+PrizePicks, MMA, Sat, Jul 15 9:10 PM, Melsik Baghdasaryan, 12.5, Fight Time (Mins)
+PrizePicks, MMA, Sat, Jul 15 9:40 PM, Nazim Sadykhov	, 5.0, Fight Time (Mins)
+PrizePicks, MMA, Sat, Jul 15 10:10 PM, Francisco Prado, 6.5, Fight Time (Mins)
+PrizePicks, MMA, Sat, Jul 15 11:10 PM, Walt Harris, 8.5, Fight Time (Mins)
+PrizePicks, MMA, Sat, Jul 15 6:10 PM, Ailín Pérez, 1.5, Takedowns
+PrizePicks, MMA, Sat, Jul 15 6:40 PM, Alexander Munoz, 2.5, Takedowns
+PrizePicks, MMA, Sat, Jul 15 7:40 PM, Evan Elder, 2.0, Takedowns
+PrizePicks, MMA, Sat, Jul 15 8:10 PM, Melquizael Costa, 1.5, Takedowns
+PrizePicks, MMA, Sat, Jul 15 8:40 PM, Viktoriia Dudakova, 2.5, Takedowns
+PrizePicks, MMA, Sat, Jul 15 11:40 PM, Holly Holm, 1.5, Takedowns
+PrizePicks, MMA, Sat, Jul 15 6:10 PM, Ailín Pérez, 71.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 6:40 PM, Alexander Munoz, 75.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 7:10 PM, Azat Maksum, 110.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 7:40 PM, Evan Elder, 102.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 8:10 PM, Melquizael Costa, 90.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 8:40 PM, Viktoriia Dudakova, 87.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 9:10 PM, Melsik Baghdasaryan, 93.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 9:40 PM, Nazim Sadykhov	, 81.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 10:10 PM, Francisco Prado, 76.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 10:40 PM, Norma Dumont , 66.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 11:10 PM, Walt Harris, 94.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 11:40 PM, Junyong Park, 77.5, Fantasy Score
+PrizePicks, MMA, Sat, Jul 15 11:40 PM, Holly Holm, 96.5, Fantasy Score
