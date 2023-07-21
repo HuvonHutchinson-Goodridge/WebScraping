@@ -36,15 +36,25 @@ async function boxing(page) {
 
     const duels = await page.$$(".am.aq.ao.ap.bl.bm.af.dg.s.ez.fg.fh.cc.h.i.j.ah.ai.m.aj.o.ak.q.al");
     console.log(duels);
+    const results = new Array();
     for (const duel of duels) {
-        const things = await page.evaluate((el) => {
+        const result = await page.evaluate((el) => {
             const name1 = el.querySelector("div > a > div:nth-child(1)").textContent;
             const name2 = el.querySelector("div > a > div:nth-child(3)").textContent
             const odds1 = el.querySelector("div > div > div > div:nth-child(2) > div:nth-child(1)").textContent
             const odds2 = el.querySelector("div > div > div > div:nth-child(2) > div:nth-child(2)").textContent
             const date = el.querySelector("time").textContent
-            console.log(name1, name2, odds1, odds2, date)
+            return `Boxing, ${date}, ${name1}, ${odds1}, ${name2}, ${odds2}`
+            
         }, duel)
+        results.push(result);
+    }
+
+    for (const result of results) {
+        fs.appendFile(`${__dirname}/../excelFiles/FanDuel/fanDuelBoxing.csv`, `${result}\n`, function (err) {
+            if (err) throw err;
+
+        })
     }
 }
 async function login(page) {
