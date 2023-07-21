@@ -6,7 +6,7 @@ const fs = require('fs');
 
 puppeteer.use(StealthPlugin());
 
-(async () => {
+(async function getData(){
     const browser = await puppeteer.launch({
         headless: false,
         executablePath: executablePath(),
@@ -14,47 +14,49 @@ puppeteer.use(StealthPlugin());
         userDataDir: "./tmp"
     });
 
+    
     //Opens page on the browser
     const page = await browser.newPage();
-
-    //Goes to a website of your choosing
     await page.goto('https://app.prizepicks.com/?__cf_chl_tk=TgXGr1Bl4p4x_ts1aStS7mz3.qY1M73TddyjpXDwmFg-1686773123-0-gaNycGzNEFA');
-
-    //Get sport buttons
-    const sportsButtons = await page.$$(`div.league`)
-
-    //Iterate over all buttons to get length
-    for (let i = 1; i <= sportsButtons.length; i++) {
-
-        //Click on every button 
-        await page.click(`.container div.league:nth-child(${i})`)
-
-        //Get selected buttons to know what page you are on
-        const selectedButton = await page.$(`.league.selected`)
-
-        //Get name of page based on button
-        const sport = await page.evaluate((el) => {
-            const name = el.querySelector('.name').textContent
-            return name;
-        }, selectedButton);
-
+    async function prizePicker() {
+        //Goes to a website of your choosing
         
-        //Make sure that the score is on page
-        await page.waitForSelector(".score")
 
-        //Only get data for MMA and PGA and Tennis
-        
+        //Get sport buttons
+        const sportsButtons = await page.$$(`div.league`)
+
+        //Iterate over all buttons to get length
+        for (let i = 1; i <= sportsButtons.length; i++) {
+
+            //Click on every button 
+            await page.click(`.container div.league:nth-child(${i})`)
+
+            //Get selected buttons to know what page you are on
+            const selectedButton = await page.$(`.league.selected`)
+
+            //Get name of page based on button
+            const sport = await page.evaluate((el) => {
+                const name = el.querySelector('.name').textContent
+                return name;
+            }, selectedButton);
+
+            fs.writeFile(`${__dirname}/../excelFiles/PrizePicks/prizePicks${sport}.csv`, "", function (err) {
+                if (err) throw err;
+
+            })
+            //Make sure that the score is on page
+            await page.waitForSelector(".score")
 
             //Get the buttons for different types of stats
             const statButtons = await page.$$(`.stat`)
 
             //Iterate over those buttons and click
-            for(let i = 1; i <= statButtons.length; i++){
+            for (let i = 1; i <= statButtons.length; i++) {
                 await page.click(`.stat-container div.stat:nth-child(${i})`)
 
                 //Get all of the players on the page and iterate over them
                 const playerNames = await page.$$(".proj-container")
-                
+
                 //Extract data
                 for (const player of playerNames) {
 
@@ -85,19 +87,25 @@ puppeteer.use(StealthPlugin());
                     } catch (err) {
 
                     }
-                    fs.appendFile(`${__dirname}/../excelFiles/prizePicks${sport}.csv`, `PrizePicks, ${sport}, ${date}, ${playerName}, ${score}, ${typeScore}\n`, function (err) {
+                    fs.appendFile(`${__dirname}/../excelFiles/PrizePicks/prizePicks${sport}.csv`, `PrizePicks, ${sport}, ${date}, ${playerName}, ${score}, ${typeScore}\n`, function (err) {
                         if (err) throw err;
 
                     })
-                
+
                 }
-            
-            
-            
+
+
+
+            }
         }
+        
     }
 
+    setInterval(prizePicker, 30000)
+    
     //Close the browser
     await browser.close()
 })()
+
+getData();
 
