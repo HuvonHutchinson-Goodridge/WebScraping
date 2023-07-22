@@ -17,65 +17,69 @@ puppeteer.use(StealthPlugin());
     //Opens page on the browser
     const page = await browser.newPage();
 
-    //Override the geolocation 
-/*    await login(page)*/
+    const URLS = ['https://ca.betano.com/sport/football/canada/cfl/10116/?bt=2', 'https://ca.betano.com/sport/esports/competitions/league-of-legends/189377/?bt=1', 'https://ca.betano.com/sport/football/canada/cfl/10116/?bt=3', 'https://ca.betano.com/sport/football/canada/cfl/10116/?bt=4', 'https://ca.betano.com/sport/football/canada/cfl/10116/?bt=5', 'https://ca.betano.com/sport/football/canada/cfl/10116/?bt=6', "https://ca.betano.com/sport/football/canada/cfl/10116/?bt=1"]
+    
+    for (const URL of URLS) {
+        await getData(page, URL);
+    }
 
-    await page.goto('https://ca.betano.com/sport/football/canada/cfl/10116/?bt=2', { waitUntil: 'networkidle0' })
-
-    await OverUnder(page);
-    //const analytics = await page.$$(".events-tabs-container__tab__item__button")
-
-    //for (let i = 2; i <= analytics.length; i++) {
-    //    await page.$eval(`.events-tabs-container__tab > li:nth-child(${i})`, el => {console.log(el.textContent) })
-    //    await Promise.all([
-    //        await page.click(`.events-tabs-container__tab > li:nth-child(${i})`),
-    //        await page.waitForNavigation()])
-
-    //}
+    
+    await browser.close();
+    
 })()
+async function getData(page, URL) {
 
-async function OverUnder(page) {
+    await page.goto(URL, { waitUntil: 'networkidle0' })
+    const sport = await page.$eval('.events-overview-header__info', el => el.textContent.trim())
+    const leagueBlocks = await page.$$(".league-block");
+    const eventTab = await page.$eval(".events-tabs-container__tab__item__button.events-tabs-container__tab__item__button--active", el => el.textContent.trim());
 
-    const teams = await page.$$(`[category="AMFO"]`)
-    await page.waitForSelector('.league-block__header__title__name')
-    const sport = await page.$eval('.league-block__header__title', el => el.textContent.trim())
-    fs.writeFile(`${__dirname}/../excelFiles/Betano/betano${sport}.csv`, "", function (err) {
+    fs.writeFile(`${__dirname}/../excelFiles/Betano/betano${sport}${eventTab.replace(/\//gi, '').replace(" ", "") }.csv`, "", function (err) {
         if (err) throw err;
 
     })
-    for (const team of teams) {
+
+    for (const block of leagueBlocks) {
+
         const results = await page.evaluate(el => {
-            const teamName = el.querySelector(`.event__header__title__link`).textContent.trim()
-            const statArray = new Array()
-            const stats = el.querySelectorAll(".markets__market")
-
-            for (const stat of stats) {
-
-                const marketTitle = stat.querySelector(".markets__market__header__title").textContent.trim()
-                const overUnders = stat.querySelectorAll(".selections__selection")
-
-                for (let i = 0; i < overUnders.length; i += 2) {
-
-                    const over = overUnders[i]
-                    const under = overUnders[i + 1]
-                    const oddTypeOver = over.querySelectorAll("span")[0].innerText.replace(/(\r\n|\n|\r)/gm, " ");
-                    const oddOver = over.querySelectorAll("span")[2].innerText;
-                    const oddTypeUnder = under.querySelectorAll("span")[0].innerText.replace(/(\r\n|\n|\r)/gm, " ");
-                    const oddUnder = under.querySelectorAll("span")[2].innerText;
-                    let result = `Betano, ${teamName}, ${marketTitle}, ${oddTypeOver}, ${oddOver}, ${oddTypeUnder}, ${oddUnder}`
-                    statArray.push(result);
-                }
             
+            const statsArray = new Array()
+            const leagueName = el.querySelector(".league-block__header__title__name").textContent.trim();
+            const leagueBlockEvents = el.querySelectorAll(`.league-block__events > div`)
+            for (const event of leagueBlockEvents) {
+
+                const eventName = event.querySelector(".event__header__title__link").textContent.trim();
+                const eventMarkets = event.querySelectorAll(".markets__market")
+
+                for (const market of eventMarkets) {
+                    console.log(market);
+                    const marketName = market.querySelector(".markets__market__header__title").textContent.trim();
+                    const selections = market.querySelectorAll(".selections")
+                
+                    for (const select of selections) {
+                        const stats = select.querySelectorAll(".selections__selection")
+                        let result = `${leagueName}, ${eventName}, ${marketName}`
+                        
+                        for (const stat of stats) {
+                            const title = stat.querySelector(".selections__selection__title").textContent.trim()
+                            const odd = stat.querySelector(".selections__selection__odd").textContent.trim()
+                            result += `, ${title}, ${odd}`
+                            
+                        }
+                        
+                        statsArray.push(result);
+                    }
+                }
             }
-            return statArray;
-        }, team)
+
+            return statsArray;
+        }, block)
 
         for (const result of results) {
-            fs.appendFile(`${__dirname}/../excelFiles/Betano/betano${sport}.csv`, `${result}\n`, function (err) {
+            fs.appendFile(`${__dirname}/../excelFiles/Betano/betano${sport}${eventTab.replace(/\//gi, '').replace(" ", "")}.csv`, `Betano, ${eventTab}, ${result}\n`, function (err) {
                 if (err) throw err;
 
             })
         }
-
     }
 }
