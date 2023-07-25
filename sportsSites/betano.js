@@ -1,40 +1,85 @@
-const puppeteer = require('puppeteer-extra');
+const { addExtra } = require('puppeteer-extra');
+const VanillaPuppeteer = require("puppeteer");
 const StealthPlugin = require('puppeteer-extra-plugin-stealth')
 const { executablePath } = require('puppeteer');
-const dotenv = require('dotenv');
-dotenv.config({ path: `./../config.env` });
-
+const { Cluster } = require("puppeteer-cluster");
 const fs = require('fs');
 
-puppeteer.use(StealthPlugin());
-
+//Use clusters to scrape multiple pages at once
 (async () => {
-    const browser = await puppeteer.launch({
-        headless: false,
-        defaultViewport: false,
+    const puppeteer = addExtra(VanillaPuppeteer);
+    puppeteer.use(StealthPlugin());
+
+    const cluster = await Cluster.launch({
+        concurrency: Cluster.CONCURRENCY_PAGE,
+        maxConcurrency: 100,
+        monitor: true,
+        puppeteerOptions: {
+            headless: false,
+            defaultViewport: false,
+            executablePath: executablePath(),
+            userDataDir: "./tmp",
+        }
+    }
+    )
+
+    cluster.on('taskerror', (err, data) => {
+        console.log(`Error crawling ${data}: ${err.message}`)
     });
 
-    //Opens page on the browser
-    const page = await browser.newPage();
 
-    const URLS = ['https://ca.betano.com/sport/football/canada/cfl/10116/?bt=2', 'https://ca.betano.com/sport/esports/competitions/league-of-legends/189377/?bt=1', 'https://ca.betano.com/sport/football/canada/cfl/10116/?bt=3', 'https://ca.betano.com/sport/football/canada/cfl/10116/?bt=4', 'https://ca.betano.com/sport/football/canada/cfl/10116/?bt=5', 'https://ca.betano.com/sport/football/canada/cfl/10116/?bt=6', "https://ca.betano.com/sport/football/canada/cfl/10116/?bt=1"]
-    
-    for (const URL of URLS) {
-        await getData(page, URL);
+
+    await cluster.task(async ({ page, data: url }) => {
+        
+        await page.goto(url, { waitUntil: 'networkidle2' });
+
+        await getData(page);
+    }
+    )
+
+    const URLS = ['https://ca.betano.com/sport/tennis/competitions/atp/11307/?bt=2',
+        'https://ca.betano.com/sport/tennis/competitions/atp/11307/?bt=3',
+        'https://ca.betano.com/sport/tennis/competitions/atp/11307/?bt=4',
+        'https://ca.betano.com/sport/tennis/competitions/atp/11307/?bt=5',
+        'https://ca.betano.com/sport/tennis/competitions/atp/11307/?bt=6',
+        'https://ca.betano.com/sport/tennis/competitions/atp/11307/?bt=7',
+        'https://ca.betano.com/sport/tennis/competitions/atp/11307/?bt=8',
+        'https://ca.betano.com/sport/tennis/competitions/atp/11307/?bt=9',
+        'https://ca.betano.com/sport/tennis/competitions/atp/11307/?bt=10',
+        'https://ca.betano.com/sport/football/canada/cfl/10116/?bt=2',
+        'https://ca.betano.com/sport/esports/competitions/league-of-legends/189377/?bt=1',
+        'https://ca.betano.com/sport/football/canada/cfl/10116/?bt=3',
+        'https://ca.betano.com/sport/football/canada/cfl/10116/?bt=4',
+        'https://ca.betano.com/sport/football/canada/cfl/10116/?bt=5',
+        'https://ca.betano.com/sport/football/canada/cfl/10116/?bt=6',
+        "https://ca.betano.com/sport/football/canada/cfl/10116/?bt=1",
+        "https://ca.betano.com/sport/tennis/competitions/wta/10003/?bt=2",
+        "https://ca.betano.com/sport/tennis/competitions/wta/10003/?bt=3",
+        "https://ca.betano.com/sport/tennis/competitions/wta/10003/?bt=4",
+        "https://ca.betano.com/sport/tennis/competitions/wta/10003/?bt=5",
+        "https://ca.betano.com/sport/tennis/competitions/wta/10003/?bt=6",
+        "https://ca.betano.com/sport/tennis/competitions/wta/10003/?bt=7",
+        "https://ca.betano.com/sport/tennis/competitions/wta/10003/?bt=8",
+        "https://ca.betano.com/sport/tennis/competitions/wta/10003/?bt=9",
+        "https://ca.betano.com/sport/tennis/competitions/wta/10003/?bt=10",
+        "https://ca.betano.com/sport/tennis/competitions/wta/10003/?bt=11"]
+
+    for (const url of URLS) {
+        cluster.queue(url)
     }
 
-    
-    await browser.close();
-    
-})()
-async function getData(page, URL) {
+    await cluster.idle();
+    await cluster.close();
 
-    await page.goto(URL, { waitUntil: 'networkidle0' })
+})();
+
+async function getData(page) {
+    await page.waitForSelector('.events-overview-header__info')
     const sport = await page.$eval('.events-overview-header__info', el => el.textContent.trim())
     const leagueBlocks = await page.$$(".league-block");
     const eventTab = await page.$eval(".events-tabs-container__tab__item__button.events-tabs-container__tab__item__button--active", el => el.textContent.trim());
 
-    fs.writeFile(`${__dirname}/../excelFiles/Betano/betano${sport}${eventTab.replace(/\//gi, '').replace(" ", "") }.csv`, "", function (err) {
+    fs.writeFile(`${__dirname}/../excelFiles/Betano/betano${sport}${eventTab.replace(/\//gi, '').replace(" ", "")}.csv`, "", function (err) {
         if (err) throw err;
 
     })
@@ -42,7 +87,7 @@ async function getData(page, URL) {
     for (const block of leagueBlocks) {
 
         const results = await page.evaluate(el => {
-            
+
             const statsArray = new Array()
             const leagueName = el.querySelector(".league-block__header__title__name").textContent.trim();
             const leagueBlockEvents = el.querySelectorAll(`.league-block__events > div`)
@@ -52,21 +97,20 @@ async function getData(page, URL) {
                 const eventMarkets = event.querySelectorAll(".markets__market")
 
                 for (const market of eventMarkets) {
-                    console.log(market);
                     const marketName = market.querySelector(".markets__market__header__title").textContent.trim();
                     const selections = market.querySelectorAll(".selections")
-                
+
                     for (const select of selections) {
                         const stats = select.querySelectorAll(".selections__selection")
                         let result = `${leagueName}, ${eventName}, ${marketName}`
-                        
+
                         for (const stat of stats) {
                             const title = stat.querySelector(".selections__selection__title").textContent.trim()
                             const odd = stat.querySelector(".selections__selection__odd").textContent.trim()
                             result += `, ${title}, ${odd}`
-                            
+
                         }
-                        
+
                         statsArray.push(result);
                     }
                 }
