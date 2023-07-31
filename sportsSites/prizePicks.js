@@ -21,7 +21,7 @@ puppeteer.use(StealthPlugin());
     async function prizePicker() {
         //Goes to a website of your choosing
         
-
+       
         //Get sport buttons
         const sportsButtons = await page.$$(`div.league`)
 
@@ -40,7 +40,7 @@ puppeteer.use(StealthPlugin());
                 return name;
             }, selectedButton);
 
-            fs.writeFile(`${__dirname}/../excelFiles/PrizePicks/prizePicks${sport}.csv`, "", function (err) {
+            fs.writeFile(`${__dirname}/../excelFiles/PrizePicks/prizePicks${sport}.csv`, "BettingSite, Date, PlayerName, Score, ScoreType\n", function (err) {
                 if (err) throw err;
 
             })
@@ -64,12 +64,22 @@ puppeteer.use(StealthPlugin());
                     let playerName = null;
                     let typeScore = null;
                     let date = null;
+
+                    try {
+                        date = await page.evaluate(el => el.querySelector(".date").textContent.replace(/,/gi, ""), player)
+                    } catch (err) {
+
+                    }
+                    if (date.startsWith("Start")) {
+                        continue;
+                    }
                     try {
                         playerName = await page.evaluate(el => el.querySelector(".player-container .player .name").textContent, player)
 
                     } catch (err) {
 
                     }
+
                     try {
                         score = await page.evaluate(el => el.querySelector(".projected-score .score .strike-red").textContent, player)
                     } catch (err) {
@@ -82,12 +92,8 @@ puppeteer.use(StealthPlugin());
 
                     }
 
-                    try {
-                        date = await page.evaluate(el => el.querySelector(".date").textContent, player)
-                    } catch (err) {
-
-                    }
-                    fs.appendFile(`${__dirname}/../excelFiles/PrizePicks/prizePicks${sport}.csv`, `PrizePicks, ${sport}, ${date}, ${playerName}, ${score}, ${typeScore}\n`, function (err) {
+                   
+                    fs.appendFile(`${__dirname}/../excelFiles/PrizePicks/prizePicks${sport}.csv`, `PrizePicks, ${date}, ${playerName}, ${score}, ${typeScore}\n`, function (err) {
                         if (err) throw err;
 
                     })
@@ -104,8 +110,8 @@ puppeteer.use(StealthPlugin());
     setInterval(prizePicker, 30000)
     
     //Close the browser
-    await browser.close()
+    /*await browser.close()*/
 })()
 
-getData();
+
 
