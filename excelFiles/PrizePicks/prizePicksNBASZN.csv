@@ -1,109 +1,30 @@
 BettingSite, Date, PlayerName, Score, ScoreType
-PrizePicks, Mon, Jul 31 7:05 PM, Corbin Burnes, 6.0, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 7:05 PM, Corbin Burnes, 6.0, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 7:05 PM, Jake Irvin, 4.5, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 7:05 PM, Jake Irvin, 4.5, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 7:07 PM, Chris Bassitt, 5.5, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 7:07 PM, Chris Bassitt, 5.5, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 7:07 PM, Kyle Gibson, 5.0, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 7:07 PM, Kyle Gibson, 5.0, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 7:20 PM, Charlie Morton, 6.5, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 7:20 PM, Charlie Morton, 6.5, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 7:20 PM, Griffin Canning, 5.5, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 7:20 PM, Griffin Canning, 5.5, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 8:05 PM, Andrew Abbott, 6.0, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 8:05 PM, Andrew Abbott, 6.0, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 8:05 PM, Marcus Stroman, 4.5, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 8:05 PM, Marcus Stroman, 4.5, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 8:10 PM, J.P. France, 4.0, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 8:10 PM, J.P. France, 4.0, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 8:10 PM, Noah Syndergaard, 3.0, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 8:10 PM, Noah Syndergaard, 3.0, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 8:40 PM, Austin Gomber, 3.5, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 8:40 PM, Austin Gomber, 3.5, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 8:40 PM, Seth Lugo, 5.5, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 8:40 PM, Seth Lugo, 5.5, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 9:40 PM, George Kirby, 5.5, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 9:40 PM, George Kirby, 5.5, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 9:40 PM, Nick Pivetta, 6.5, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 9:40 PM, Nick Pivetta, 6.5, Pitcher Strikeouts
-PrizePicks, Mon, Jul 31 7:05 PM, Corbin Burnes + Jake Irvin, 10.5, Pitcher Strikeouts (Combo)
-PrizePicks, Mon, Jul 31 7:05 PM, Corbin Burnes + Jake Irvin, 10.5, Pitcher Strikeouts (Combo)
-PrizePicks, Mon, Jul 31 8:05 PM, Andrew Abbott + Marcus Stroman, 10.5, Pitcher Strikeouts (Combo)
-PrizePicks, Mon, Jul 31 8:05 PM, Andrew Abbott + Marcus Stroman, 10.5, Pitcher Strikeouts (Combo)
-PrizePicks, Mon, Jul 31 6:40 PM, Taijuan Walker + Edward Cabrera , 0.5, 1st Inning Runs Allowed
-PrizePicks, Mon, Jul 31 6:40 PM, Taijuan Walker + Edward Cabrera , 0.5, 1st Inning Runs Allowed
-PrizePicks, Mon, Jul 31 7:05 PM, Corbin Burnes + Jake Irvin, 0.5, 1st Inning Runs Allowed
-PrizePicks, Mon, Jul 31 7:05 PM, Corbin Burnes + Jake Irvin, 0.5, 1st Inning Runs Allowed
-PrizePicks, Mon, Jul 31 7:07 PM, Chris Bassitt + Kyle Gibson, 0.5, 1st Inning Runs Allowed
-PrizePicks, Mon, Jul 31 7:07 PM, Chris Bassitt + Kyle Gibson, 0.5, 1st Inning Runs Allowed
-PrizePicks, Mon, Jul 31 9:40 PM, Nick Pivetta + George Kirby, 0.5, 1st Inning Runs Allowed
-PrizePicks, Mon, Jul 31 9:40 PM, Nick Pivetta + George Kirby, 0.5, 1st Inning Runs Allowed
-PrizePicks, Mon, Jul 31 7:05 PM, Christian Yelich + Lane Thomas, 3.5, Hits+Runs+RBIs (Combo)
-PrizePicks, Mon, Jul 31 7:05 PM, Christian Yelich + Lane Thomas, 3.5, Hits+Runs+RBIs (Combo)
-PrizePicks, Mon, Jul 31 7:20 PM, Ronald Acuña Jr. + Shohei Ohtani, 4.5, Hits+Runs+RBIs (Combo)
-PrizePicks, Mon, Jul 31 7:20 PM, Ronald Acuña Jr. + Shohei Ohtani, 4.5, Hits+Runs+RBIs (Combo)
-PrizePicks, Mon, Jul 31 8:40 PM, Fernando Tatis Jr. + Ryan McMahon, 5.0, Hits+Runs+RBIs (Combo)
-PrizePicks, Mon, Jul 31 8:40 PM, Fernando Tatis Jr. + Ryan McMahon, 5.0, Hits+Runs+RBIs (Combo)
-PrizePicks, Mon, Jul 31 9:40 PM, Rafael Devers + Julio Rodríguez, 3.5, Hits+Runs+RBIs (Combo)
-PrizePicks, Mon, Jul 31 9:40 PM, Rafael Devers + Julio Rodríguez, 3.5, Hits+Runs+RBIs (Combo)
-PrizePicks, Mon, Jul 31 6:40 PM, Luis Arraez, 7.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 6:40 PM, Luis Arraez, 7.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 6:40 PM, Bryce Harper, 7.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 6:40 PM, Bryce Harper, 7.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:05 PM, Christian Yelich, 8.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:05 PM, Christian Yelich, 8.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:05 PM, Aaron Judge, 8.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:05 PM, Aaron Judge, 8.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:05 PM, Wander Franco, 7.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:05 PM, Wander Franco, 7.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:05 PM, Gleyber Torres, 6.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:05 PM, Gleyber Torres, 6.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:05 PM, Yandy Díaz, 6.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:05 PM, Yandy Díaz, 6.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:07 PM, Vladimir Guerrero Jr., 7.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:07 PM, Vladimir Guerrero Jr., 7.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:07 PM, Adley Rutschman, 6.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:07 PM, Adley Rutschman, 6.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:07 PM, Bo Bichette, 8.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:07 PM, Bo Bichette, 8.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:07 PM, Anthony Santander, 6.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:07 PM, Anthony Santander, 6.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:20 PM, Ronald Acuña Jr., 11.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:20 PM, Ronald Acuña Jr., 11.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:20 PM, Shohei Ohtani, 8.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:20 PM, Shohei Ohtani, 8.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:20 PM, Matt Olson, 8.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:20 PM, Matt Olson, 8.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:05 PM, Elly De La Cruz, 8.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:05 PM, Elly De La Cruz, 8.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:05 PM, Cody Bellinger, 7.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:05 PM, Cody Bellinger, 7.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:05 PM, Matt McLain, 6.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:05 PM, Matt McLain, 6.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:05 PM, Nico Hoerner, 7.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:05 PM, Nico Hoerner, 7.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:10 PM, Yordan Alvarez, 8.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:10 PM, Yordan Alvarez, 8.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:10 PM, José Ramírez, 7.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:10 PM, José Ramírez, 7.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:10 PM, Alex Bregman, 7.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:10 PM, Alex Bregman, 7.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:10 PM, Steven Kwan, 7.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:10 PM, Steven Kwan, 7.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:40 PM, Fernando Tatis Jr., 10.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:40 PM, Fernando Tatis Jr., 10.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:40 PM, Juan Soto, 9.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:40 PM, Juan Soto, 9.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 9:40 PM, Rafael Devers, 7.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 9:40 PM, Rafael Devers, 7.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 9:40 PM, Julio Rodríguez, 7.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 9:40 PM, Julio Rodríguez, 7.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 9:40 PM, Justin Turner, 7.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 9:40 PM, Justin Turner, 7.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 9:45 PM, Corbin Carroll, 8.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 9:45 PM, Corbin Carroll, 8.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 9:45 PM, J.D. Davis, 6.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 9:45 PM, J.D. Davis, 6.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 9:45 PM, Ketel Marte, 7.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 9:45 PM, Ketel Marte, 7.5, Hitter Fantasy Score
+PrizePicks, Tue Oct 24 7:30 PM, Victor Wembanyama, 18.5, Points Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Scoot Henderson, 15.8, Points Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Brandon Miller , 14.3, Points Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Nikola Jokic, 25.6, Points Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Shai Gilgeous-Alexander, 29.9, Points Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Lebron James, 27.1, Points Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Luka Doncic, 30.6, Points Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Giannis Antetokounmpo, 30.4, Points Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Jayson Tatum, 28.7, Points Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Stephen Curry, 28.9, Points Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Bradley Beal, 21.8, Points Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Kristaps Porzingis, 18.9, Points Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Victor Wembanyama, 8.8, Rebounds Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Nikola Jokic, 11.9, Rebounds Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Domantas Sabonis, 12.1, Rebounds Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Lebron James, 7.9, Rebounds Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Luka Doncic, 8.4, Rebounds Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Giannis Antetokounmpo, 11.7, Rebounds Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Clint Capela, 11.1, Rebounds Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Bam Adebayo, 9.4, Rebounds Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Rudy Gobert, 11.6, Rebounds Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Kristaps Porzingis, 8.8, Rebounds Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Trae Young, 9.8, Assists Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Nikola Jokic, 9.2, Assists Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Lebron James, 6.9, Assists Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Luka Doncic, 7.7, Assists Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Darius Garland, 7.7, Assists Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Tyrese Haliburton, 9.7, Assists Per Game AVG
+PrizePicks, Tue Oct 24 7:30 PM, Josh Giddey, 6.3, Assists Per Game AVG
