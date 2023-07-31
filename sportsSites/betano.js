@@ -19,7 +19,8 @@ const fs = require('fs');
             defaultViewport: false,
             executablePath: executablePath(),
             userDataDir: "./tmp",
-        }
+        },
+        timeout: 100000,
     }
     )
 
@@ -31,7 +32,7 @@ const fs = require('fs');
 
     await cluster.task(async ({ page, data: url }) => {
         
-        await page.goto(url, { waitUntil: 'networkidle2' });
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
 
         await getData(page);
     }
@@ -74,12 +75,16 @@ const fs = require('fs');
 })();
 
 async function getData(page) {
-    await page.waitForSelector('.events-overview-header__info')
+    try {
+        await page.waitForSelector('.events-overview-header__info', {timeout: 100000})
+    } catch (err) {
+
+    }
     const sport = await page.$eval('.events-overview-header__info', el => el.textContent.trim())
     const leagueBlocks = await page.$$(".league-block");
     const eventTab = await page.$eval(".events-tabs-container__tab__item__button.events-tabs-container__tab__item__button--active", el => el.textContent.trim());
 
-    fs.writeFile(`${__dirname}/../excelFiles/Betano/betano${sport}${eventTab.replace(/\//gi, '').replace(" ", "")}.csv`, "", function (err) {
+    fs.writeFile(`${__dirname}/../excelFiles/Betano/betano${sport}${eventTab.replace(/\//gi, '').replace(" ", "")}.csv`, "BettingSite, Event Tab, League, Event, Market, Stats\n", function (err) {
         if (err) throw err;
 
     })
@@ -102,16 +107,17 @@ async function getData(page) {
 
                     for (const select of selections) {
                         const stats = select.querySelectorAll(".selections__selection")
-                        let result = `${leagueName}, ${eventName}, ${marketName}`
+                        
 
                         for (const stat of stats) {
+                            let result = `${leagueName.replace(/,/gi, "")}, ${eventName.replace(/,/gi, "")}, ${marketName.replace(/,/gi, "") },`
                             const title = stat.querySelector(".selections__selection__title").textContent.trim()
                             const odd = stat.querySelector(".selections__selection__odd").textContent.trim()
-                            result += `, ${title}, ${odd}`
-
+                            result += ` ${title} ${odd}`.replace(/,/gi, "")
+                            statsArray.push(result);
                         }
 
-                        statsArray.push(result);
+                        
                     }
                 }
             }
