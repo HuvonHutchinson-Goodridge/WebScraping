@@ -31,7 +31,7 @@ const fs = require('fs');
 
 
     await cluster.task(async ({ page, data: url }) => {
-        
+
         await page.goto(url, { waitUntil: 'domcontentloaded' });
 
         await getData(page);
@@ -63,7 +63,16 @@ const fs = require('fs');
         "https://ca.betano.com/sport/tennis/competitions/wta/10003/?bt=8",
         "https://ca.betano.com/sport/tennis/competitions/wta/10003/?bt=9",
         "https://ca.betano.com/sport/tennis/competitions/wta/10003/?bt=10",
-        "https://ca.betano.com/sport/tennis/competitions/wta/10003/?bt=11"]
+        "https://ca.betano.com/sport/tennis/competitions/wta/10003/?bt=11",
+        "https://www.betano.ca/sport/basketball/north-america/wnba-w/17089/?bt=2",
+        "https://www.betano.ca/sport/basketball/north-america/wnba-w/17089/?bt=3",
+        "https://www.betano.ca/sport/esports/counter-strike-go/iem-cologne/195272/?bt=1",
+        "https://www.betano.ca/sport/football/north-america/nfl/1611/?bt=1",
+        "https://www.betano.ca/sport/football/north-america/nfl/1611/?bt=2",
+        "https://www.betano.ca/sport/football/north-america/nfl/1611/?bt=3",
+        "https://www.betano.ca/sport/football/north-america/nfl/1611/?bt=4",
+        "https://www.betano.ca/sport/football/north-america/nfl/1611/?bt=5",
+        "https://www.betano.ca/sport/football/north-america/nfl/1611/?bt=6"]
 
     for (const url of URLS) {
         cluster.queue(url)
@@ -76,7 +85,7 @@ const fs = require('fs');
 
 async function getData(page) {
     try {
-        await page.waitForSelector('.events-overview-header__info', {timeout: 100000})
+        await page.waitForSelector('.events-overview-header__info', { timeout: 100000 })
     } catch (err) {
 
     }
@@ -107,17 +116,17 @@ async function getData(page) {
 
                     for (const select of selections) {
                         const stats = select.querySelectorAll(".selections__selection")
-                        
+
 
                         for (const stat of stats) {
-                            let result = `${leagueName.replace(/,/gi, "")}, ${eventName.replace(/,/gi, "")}, ${marketName.replace(/,/gi, "") },`
+                            let result = `${leagueName.replace(/,/gi, "")}, ${eventName.replace(/,/gi, "")}, ${marketName.replace(/,/gi, "")},`
                             const title = stat.querySelector(".selections__selection__title").textContent.trim()
                             const odd = stat.querySelector(".selections__selection__odd").textContent.trim()
                             result += ` ${title} ${odd}`.replace(/,/gi, "")
                             statsArray.push(result);
                         }
 
-                        
+
                     }
                 }
             }
