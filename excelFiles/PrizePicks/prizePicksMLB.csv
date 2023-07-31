@@ -1,4 +1,4 @@
-Betting Site, Date, Player Name, Score, Score Type
+BettingSite, Date, PlayerName, Score, ScoreType
 PrizePicks, Mon, Jul 31 7:05 PM, Corbin Burnes, 6.0, Pitcher Strikeouts
 PrizePicks, Mon, Jul 31 7:05 PM, Jake Irvin, 4.5, Pitcher Strikeouts
 PrizePicks, Mon, Jul 31 7:07 PM, Chris Bassitt, 5.5, Pitcher Strikeouts
@@ -15,41 +15,3 @@ PrizePicks, Mon, Jul 31 9:40 PM, George Kirby, 5.5, Pitcher Strikeouts
 PrizePicks, Mon, Jul 31 9:40 PM, Nick Pivetta, 6.5, Pitcher Strikeouts
 PrizePicks, Mon, Jul 31 7:05 PM, Corbin Burnes + Jake Irvin, 10.5, Pitcher Strikeouts (Combo)
 PrizePicks, Mon, Jul 31 8:05 PM, Andrew Abbott + Marcus Stroman, 10.5, Pitcher Strikeouts (Combo)
-PrizePicks, Mon, Jul 31 6:40 PM, Taijuan Walker + Edward Cabrera , 0.5, 1st Inning Runs Allowed
-PrizePicks, Mon, Jul 31 7:05 PM, Corbin Burnes + Jake Irvin, 0.5, 1st Inning Runs Allowed
-PrizePicks, Mon, Jul 31 7:07 PM, Chris Bassitt + Kyle Gibson, 0.5, 1st Inning Runs Allowed
-PrizePicks, Mon, Jul 31 9:40 PM, Nick Pivetta + George Kirby, 0.5, 1st Inning Runs Allowed
-PrizePicks, Mon, Jul 31 7:05 PM, Christian Yelich + Lane Thomas, 3.5, Hits+Runs+RBIs (Combo)
-PrizePicks, Mon, Jul 31 7:20 PM, Ronald Acuña Jr. + Shohei Ohtani, 4.5, Hits+Runs+RBIs (Combo)
-PrizePicks, Mon, Jul 31 8:40 PM, Fernando Tatis Jr. + Ryan McMahon, 5.0, Hits+Runs+RBIs (Combo)
-PrizePicks, Mon, Jul 31 9:40 PM, Rafael Devers + Julio Rodríguez, 3.5, Hits+Runs+RBIs (Combo)
-PrizePicks, Mon, Jul 31 6:40 PM, Luis Arraez, 7.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 6:40 PM, Bryce Harper, 7.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:05 PM, Christian Yelich, 8.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:05 PM, Aaron Judge, 8.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:05 PM, Wander Franco, 7.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:05 PM, Gleyber Torres, 6.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:05 PM, Yandy Díaz, 6.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:07 PM, Vladimir Guerrero Jr., 7.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:07 PM, Adley Rutschman, 6.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:07 PM, Bo Bichette, 8.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:07 PM, Anthony Santander, 6.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:20 PM, Ronald Acuña Jr., 11.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:20 PM, Shohei Ohtani, 8.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 7:20 PM, Matt Olson, 8.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:05 PM, Elly De La Cruz, 8.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:05 PM, Cody Bellinger, 7.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:05 PM, Matt McLain, 6.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:05 PM, Nico Hoerner, 7.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:10 PM, Yordan Alvarez, 8.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:10 PM, José Ramírez, 7.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:10 PM, Alex Bregman, 7.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:10 PM, Steven Kwan, 7.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:40 PM, Fernando Tatis Jr., 10.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 8:40 PM, Juan Soto, 9.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 9:40 PM, Rafael Devers, 7.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 9:40 PM, Julio Rodríguez, 7.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 9:40 PM, Justin Turner, 7.0, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 9:45 PM, Corbin Carroll, 8.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 9:45 PM, J.D. Davis, 6.5, Hitter Fantasy Score
-PrizePicks, Mon, Jul 31 9:45 PM, Ketel Marte, 7.5, Hitter Fantasy Score
