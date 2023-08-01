@@ -1,0 +1,1 @@
+./NFL/Compile/AllOdds.sh
